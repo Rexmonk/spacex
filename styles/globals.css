@@ -1,16 +1,118 @@
-html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
 }
 
 * {
   box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+}
+
+.card {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  border-radius: 6px;
+}
+
+.filter-title {
+  text-align: center;
+  border-bottom: 1px solid #000;
+  padding: 8px 0;
+  margin: 10px 0 10px 0;
+}
+
+.row {
+  display: flex;
+  margin: 0 -15px;
+  flex-wrap: wrap;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+.search-section .card {
+  margin-bottom: 30px;
+}
+
+.filter-badge {
+  background-color: #c5e09b;
+  color: #000;
+  border-radius: 4px;
+  width: 50%;
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+}
+.filter-badge.active {
+  background-color: red;
+}
+#sidebar .card {
+  margin-bottom: 30px;
+}
+.filter-badge:hover {
+  background-color: red;
+}
+.col-xs-6 {
+  width: 50%;
+}
+
+.col-xs-12 {
+  width: 100%;
+}
+[class^="col-"] {
+  padding: 0 15px;
+}
+@media (min-width: 700px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+  .container {
+    width: 100%;
+  }
+  .col-sm-4 {
+    width: 25%;
+  }
+
+  .col-sm-8 {
+    width: 75%;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .col-lg-3 {
+    width: 33.333%;
+  }
+  .col-lg-4 {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+.card-placeholder {
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

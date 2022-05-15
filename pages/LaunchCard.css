@@ -1,0 +1,17 @@
+.launchCard{
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+}
+.launchImg{
+  padding: 15px;
+  background-color: #f2f2f2;
+  margin-bottom: 15px;
+}
+.launchImg img{
+  width: 100%;
+}
+.launchTitle{
+  color: #545da0;
+  margin-bottom: 15px;
+}
