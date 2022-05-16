@@ -1,14 +1,14 @@
 import Card from "./Card";
 //import { useSearchParams } from "react-router-dom";
 import { useRouter } from "next/router";
-import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setSearchItem, setIsLoading } from "../../Redux/Slices/SearchReducer";
 import { useState } from "react";
 import { useEffect } from "react";
 
+import { searchApi } from "../Utils/SearchApi";
+
 const SideBarFilter = ({ className: classes }) => {
-  const apiUrl = process.env.NEXT_PUBLIC_SPACEX_API;
   //let [searchParams, setSearchParams] = useSearchParams();
   const router = useRouter();
   let [activeYear, setActiveYear] = useState("");
@@ -51,18 +51,15 @@ const SideBarFilter = ({ className: classes }) => {
         break;
     }
 
-    searchApi();
+    search();
   };
 
-  const searchApi = () => {
-    axios
-      .get(apiUrl, {
-        params: {
-          launch_year: router.query.launch_year || "",
-          launch_success: router.query.launch_success || "",
-          land_success: router.query.land_success || "",
-        },
-      })
+  const search = () => {
+    searchApi(
+      router.query.launch_year,
+      router.query.launch_success,
+      router.query.land_success
+    )
       .then(function (response) {
         dispatch(setIsLoading(false));
         dispatch(setSearchItem(response.data));
