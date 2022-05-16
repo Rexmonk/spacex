@@ -2,7 +2,6 @@ import SearchItemsSection from "./Common/SearchItemsSection";
 import SideBarFilter from "./Common/SideBarFilter";
 
 const Main = ({ url }) => {
-  console.log("url", url);
   return (
     <div className="container">
       <h1>SpacEx Launch programs</h1>

@@ -55,7 +55,6 @@ const SideBarFilter = ({ className: classes }) => {
   };
 
   const searchApi = () => {
-    console.log("api called");
     axios
       .get(apiUrl, {
         params: {
